@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "StarWarsChallange",
+    "slug": "StarWarsChallange",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "StarWarsChallange"
+}
