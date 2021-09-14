@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CharacterCards } from '../../components/CharacterCards';
+
+import { CharacterDTO } from '../../dtos/CharacterDTO';
 
 import {
  Container,
@@ -12,7 +14,23 @@ import {
 } from './styles';
 
 export function Home(){
-const [ characters, setCharacters] = useState([]);
+const [ characters, setCharacters] = useState<CharacterDTO[]>([]);
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+
+  async function fetchCharacters() {
+    
+    try {
+
+
+    } catch(error) {
+
+    }
+
+  }
+
+}, []);
 
 return (
   <Container> 
