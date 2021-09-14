@@ -26,6 +26,33 @@ export const Logotipo = styled.Image`
 
 `;
 
+export const Content = styled.View`
+
+  width: 100%;
+
+  flex-direction: row;
+
+
+`;
+
+export const ListTitle = styled.Text`
+
+   color: ${({theme}) => theme.colors.title};
+   font-family: ${({theme}) => theme.fonts.secondary_600};
+   font-size: ${RFValue(14)}px; 
+`;
+
+export const ListSubTitle = styled.Text`
+
+   color: ${({theme}) => theme.colors.shape};
+   font-family: ${({theme}) => theme.fonts.secondary_400};
+   font-size: ${RFValue(14)}px; 
+
+   margin-left: 5px;
+
+`;
+
+
 export const ListCharactersContent = styled.View`
 
    width: 100%;

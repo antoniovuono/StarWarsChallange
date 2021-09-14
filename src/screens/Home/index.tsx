@@ -5,7 +5,10 @@ import {
  Container,
  Header,
  Logotipo,
- ListCharactersContent
+ ListCharactersContent,
+ Content,
+ ListTitle,
+ ListSubTitle,
 } from './styles';
 
 export function Home(){
@@ -17,6 +20,15 @@ return (
     </Header>
 
     <ListCharactersContent>
+
+      <Content>
+
+          <ListTitle>Lista:</ListTitle>
+
+          <ListSubTitle>Foram encontrados 12 personagens</ListSubTitle>
+
+      </Content>
+
 
       <CharacterCards />
 

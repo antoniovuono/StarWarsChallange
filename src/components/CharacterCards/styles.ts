@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { MaterialIcons } from '@expo/vector-icons';
 
+
 export const Container = styled.View`
 
     margin-top: 10px;
@@ -29,7 +30,7 @@ export const Name = styled.Text`
 
 `;
 
-export const ButtonFavorite = styled.View``;
+export const ButtonFavorite = styled.TouchableOpacity``;
 
 export const FavoriteIcon = styled(MaterialIcons )`
 
