@@ -4,7 +4,6 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
    flex: 1;
-
    background-color: ${({theme}) => theme.colors.primary_background};
 `;
 
@@ -22,9 +21,16 @@ export const Header = styled.View`
 
 export const Logotipo = styled.Image`
 
-
       height: ${RFValue(50)}px;
       width:  ${RFValue(100)}px;
+
+`;
+
+export const ListCharactersContent = styled.View`
+
+   width: 100%;
+   padding: 25px 25px;
+  
 
 `;
 
