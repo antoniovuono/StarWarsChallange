@@ -20,7 +20,7 @@ return (
 
           <ButtonFavorite>
             <FavoriteIcon 
-                name="favorite"
+                name="rightcircle"
                 size={24}
             />
           </ButtonFavorite>

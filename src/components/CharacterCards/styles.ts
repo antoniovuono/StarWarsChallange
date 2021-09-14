@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
 
 
@@ -17,7 +17,7 @@ export const Container = styled(RectButton)`
     justify-content: space-between;
     align-items: center;
 
-    padding: 14px;
+    padding: 10px;
 
     border-radius: 5px;
 
@@ -35,8 +35,9 @@ export const Name = styled.Text`
 
 export const ButtonFavorite = styled.TouchableOpacity``;
 
-export const FavoriteIcon = styled(MaterialIcons )`
+export const FavoriteIcon = styled(AntDesign)`
 
     color: ${({theme}) => theme.colors.title};
+   
 
 `;
