@@ -7,12 +7,16 @@ import {
  FavoriteIcon
 } from './styles';
 
-export function CharacterCards(){
+interface Props {
+  name: string;
+}
+
+export function CharacterCards({ name }: Props){
 return (
   <Container> 
 
       
-       <Name>Luke Skill Walker</Name>
+       <Name>{name}</Name>
 
           <ButtonFavorite>
             <FavoriteIcon 

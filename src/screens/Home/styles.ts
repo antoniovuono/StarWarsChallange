@@ -32,6 +32,8 @@ export const Content = styled.View`
 
   flex-direction: row;
 
+  padding: 10px 5px;
+
 
 `;
 

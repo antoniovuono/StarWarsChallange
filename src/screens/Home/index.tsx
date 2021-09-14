@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CharacterCards } from '../../components/CharacterCards';
 
 import {
@@ -12,6 +12,8 @@ import {
 } from './styles';
 
 export function Home(){
+const [ characters, setCharacters] = useState([]);
+
 return (
   <Container> 
 
@@ -30,11 +32,9 @@ return (
       </Content>
 
 
-      <CharacterCards />
+      <CharacterCards name="Luke Skal Walker" />
 
-      <CharacterCards />
-
-      <CharacterCards />
+      <CharacterCards name="Mareta 12"  />
 
 
     </ListCharactersContent>
