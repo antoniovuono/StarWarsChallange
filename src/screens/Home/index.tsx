@@ -36,14 +36,9 @@ async function fetchCharacters() {
   //console.log(response.data)
   setCharacters([...characters, ...response.data.results]);
   
-  if(page === 10) {
+ 
     setPage(page+1);
-  } else {
-    setPage(page+0);
-  }
-  
-  setPage(page+1);
-  
+
   
   } catch(error) {
     console.log(error);
@@ -76,6 +71,10 @@ return (
           <ListSubTitle>Foram encontrados {characters.length} personagens</ListSubTitle>
 
       </Content>
+
+      <ListTitle style={{ fontSize:13, padding: 5 }}>
+        Role a lista para baixo para obter mais personagens
+      </ListTitle>
 
         { loading ? <Load /> :
 
