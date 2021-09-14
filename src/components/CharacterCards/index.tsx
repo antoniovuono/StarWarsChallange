@@ -9,12 +9,12 @@ import {
 
 interface Props {
   name: string;
+  onPress: () => void;
 }
 
-export function CharacterCards({ name }: Props){
+export function CharacterCards({ name, onPress, ...rest }: Props){
 return (
-  <Container> 
-
+  <Container onPress={onPress} {...rest}> 
       
        <Name>{name}</Name>
 

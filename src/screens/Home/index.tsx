@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import { CharacterCards } from '../../components/CharacterCards';
 import { FooterList } from '../../components/FooterList';
@@ -19,10 +20,15 @@ import {
 } from './styles';
 
 export function Home(){
-
 const [characters, setCharacters] = useState<CharacterDTO[]>([]);
 const [page, setPage] = useState(1);
 const [loading, setLoading] = useState(true);
+
+const navigation = useNavigation();
+
+function handleCharactersDetails() {
+    navigation.navigate('CharacterDetails');
+}
 
 
 async function fetchCharacters() {
@@ -31,10 +37,7 @@ async function fetchCharacters() {
  
       const response = await api.get(`/people/?page=${page}`);
 
-
-      //console.log(response.data)
       setCharacters([...characters, ...response.data.results]);
-      
       setPage(page+1);
 
   
@@ -80,7 +83,7 @@ return (
                   data={characters}
                   keyExtractor={ item => item.name}
                   renderItem={({ item }) => (
-                      <CharacterCards name={item.name} />
+                      <CharacterCards name={item.name} onPress={handleCharactersDetails} />
                     )} 
                   onEndReached={fetchCharacters}
                   onEndReachedThreshold={0.1}
