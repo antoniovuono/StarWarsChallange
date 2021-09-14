@@ -28,14 +28,14 @@ const [loading, setLoading] = useState(true);
 async function fetchCharacters() {
     
   try {
-   
-  const response = await api.get(`/people/?page=${page}`);
-
-  //console.log(response.data)
-  setCharacters([...characters, ...response.data.results]);
-  
  
-    setPage(page+1);
+      const response = await api.get(`/people/?page=${page}`);
+
+
+      //console.log(response.data)
+      setCharacters([...characters, ...response.data.results]);
+      
+      setPage(page+1);
 
   
   } catch(error) {
@@ -45,7 +45,6 @@ async function fetchCharacters() {
   }
 
 }
-
 
 useEffect(() => {
 
@@ -91,7 +90,6 @@ return (
         }
            
             
-
 
     </ListCharactersContent>
 

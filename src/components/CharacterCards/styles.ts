@@ -3,6 +3,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { MaterialIcons } from '@expo/vector-icons';
 
 
+
 export const Container = styled.View`
 
     margin-top: 10px;
@@ -19,6 +20,8 @@ export const Container = styled.View`
     padding: 14px;
 
     border-radius: 5px;
+
+   
 
 `;
 

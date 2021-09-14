@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { getBottomSpace, getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { CharacterDTO } from '../../dtos/CharacterDTO';
 
 export const Container = styled.View`
@@ -62,12 +62,14 @@ export const ListCharactersContent = styled.View`
    width: 100%;
    padding: 25px 25px;
 
+
+
 `;
 
 export const CharacterList = styled(FlatList as new () => FlatList<CharacterDTO>)`
 
 
-
+  
 
 
 `;

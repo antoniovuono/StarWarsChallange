@@ -49,7 +49,7 @@ export default function App() {
             backgroundColor="transparent"
          />
 
-         <Home />
+         <CharacterDetails />
 
     </ThemeProvider>
 
