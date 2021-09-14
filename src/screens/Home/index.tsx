@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
 import { CharacterCards } from '../../components/CharacterCards';
+import { Load } from '../../components/Load';
 
 import { CharacterDTO } from '../../dtos/CharacterDTO';
 import { api } from '../../services/api';
@@ -27,12 +29,12 @@ useEffect(() => {
     const response = await api.get('/people');
 
     //console.log(response.data)
-    setCharacters(response.data);
+    setCharacters(response.data.results);
     
     } catch(error) {
       console.log(error);
     } finally {
-      setLoading(false);
+     setLoading(false);
     }
 
   }
@@ -54,19 +56,23 @@ return (
 
           <ListTitle>Lista:</ListTitle>
 
-          <ListSubTitle>Foram encontrados 12 personagens</ListSubTitle>
+          <ListSubTitle>Foram encontrados {characters.length} personagens</ListSubTitle>
 
       </Content>
 
-            <CharacterList
+        { loading ? <Load /> :
 
-              data={characters}
-              keyExtractor={ item => item.name}
-              showsVerticalScrollIndicator={false}
-              renderItem={({ item }) => (
-                  <CharacterCards name={item.name} />
-                )} 
-           />
+                <CharacterList
+
+                  data={characters}
+                  keyExtractor={ item => item.name}
+                  renderItem={({ item }) => (
+                      <CharacterCards name={item.name} />
+                    )} 
+              />
+              
+        }
+           
             
 
 

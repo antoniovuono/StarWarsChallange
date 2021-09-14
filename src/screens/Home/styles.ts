@@ -1,7 +1,7 @@
-import { FlatList } from 'react-native';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
-import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
+import { FlatList } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { CharacterDTO } from '../../dtos/CharacterDTO';
 
 export const Container = styled.View`
