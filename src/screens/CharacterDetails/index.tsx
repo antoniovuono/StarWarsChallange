@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import {
  Container,
  Header,
  BackButton,
+ BackButtonIcon,
  Title,
  DetailsContent,
  DetailsHeader,
@@ -16,11 +18,21 @@ import {
 } from './styles';
 
 export function CharacterDetails(){
+
+const navigation = useNavigation();
+
+function handleGoBack() {
+  navigation.goBack();
+}
+
 return (
   <Container> 
       <Header>
-        <BackButton name="arrow-bold-left" size={24}/>
-        <Title>Caracteristicas do personagem</Title>
+        
+          <BackButton onPress={handleGoBack}>
+            <BackButtonIcon name="arrow-bold-left" size={24}/>
+          </BackButton>
+          <Title>Caracteristicas do personagem</Title>
       </Header>
 
       <DetailsContent>

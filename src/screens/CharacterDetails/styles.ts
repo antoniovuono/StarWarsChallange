@@ -24,7 +24,9 @@ export const Header = styled.View`
 
 `;
 
-export const BackButton = styled(Entypo)`
+export const BackButton = styled.TouchableOpacity``;
+
+export const BackButtonIcon = styled(Entypo)`
 
    color: ${({theme}) => theme.colors.title};
 
