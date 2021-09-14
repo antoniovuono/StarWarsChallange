@@ -26,8 +26,8 @@ const [loading, setLoading] = useState(true);
 
 const navigation = useNavigation();
 
-function handleCharactersDetails() {
-    navigation.navigate('CharacterDetails');
+function handleCharactersDetails(character: CharacterDTO) {
+    navigation.navigate('CharacterDetails', {character});
 }
 
 
@@ -83,7 +83,7 @@ return (
                   data={characters}
                   keyExtractor={ item => item.name}
                   renderItem={({ item }) => (
-                      <CharacterCards name={item.name} onPress={handleCharactersDetails} />
+                      <CharacterCards name={item.name} onPress={() => handleCharactersDetails(item)} />
                     )} 
                   onEndReached={fetchCharacters}
                   onEndReachedThreshold={0.1}
