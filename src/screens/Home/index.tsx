@@ -66,14 +66,11 @@ return (
               renderItem={({ item }) => (
                   <CharacterCards name={item.name} />
                 )} 
-              />
-
-      
+           />
+            
 
 
     </ListCharactersContent>
-
-    
 
   </Container>
   );

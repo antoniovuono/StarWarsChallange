@@ -19,6 +19,7 @@ import {
 } from '@expo-google-fonts/archivo';
 
 import { Home } from './src/screens/Home';
+import { CharacterDetails } from './src/screens/CharacterDetails';
 
 
 export default function App() {
