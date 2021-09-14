@@ -61,11 +61,11 @@ export const ListCharactersContent = styled.View`
 
    width: 100%;
    padding: 25px 25px;
-  
 
 `;
 
 export const CharacterList = styled(FlatList as new () => FlatList<CharacterDTO>)`
+
 
 
 
