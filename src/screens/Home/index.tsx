@@ -2,16 +2,21 @@ import React from 'react';
 
 import {
  Container,
- Title
+ Header,
+ Logotipo,
 } from './styles';
 
 export function Home(){
 return (
   <Container> 
 
-      <Title>
-          Hello World !
-      </Title>
+    <Header>
+      <Logotipo source={{ uri: 'https://imagensemoldes.com.br/wp-content/uploads/2020/06/Star-Wars-PNG.png' }} />
+
+     
+    </Header>
+
+    
 
   </Container>
   );

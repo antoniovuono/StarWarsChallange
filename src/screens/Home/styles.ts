@@ -1,18 +1,30 @@
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
    flex: 1;
 
-   align-items: center;
-   justify-content: center;
-
    background-color: ${({theme}) => theme.colors.primary_background};
 `;
 
-export const Title = styled.Text`
+export const Header = styled.View`
 
-   color: ${({theme}) => theme.colors.title};
-   font-size: 20px;
-   font-family: ${({theme}) => theme.fonts.secondary_600};
+   width: 100%;
+   height: 120px;
+
+   justify-content: center;
+   align-items: center;
+
+   margin-top: ${getStatusBarHeight() + 10}px;
 
 `;
+
+export const Logotipo = styled.Image`
+
+
+      height: ${RFValue(50)}px;
+      width:  ${RFValue(100)}px;
+
+`;
+
