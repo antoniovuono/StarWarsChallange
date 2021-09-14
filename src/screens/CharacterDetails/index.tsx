@@ -33,32 +33,32 @@ return (
         <DetailsBody>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Height:</CharacteristicsTitle>
+            <CharacteristicsTitle>Altura:</CharacteristicsTitle>
             <CharacteristicsValue>1.60</CharacteristicsValue>
           </CharacteristicsContent>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Mass:</CharacteristicsTitle>
+            <CharacteristicsTitle>Massa:</CharacteristicsTitle>
             <CharacteristicsValue>1.60</CharacteristicsValue>
           </CharacteristicsContent>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Hair Color:</CharacteristicsTitle>
+            <CharacteristicsTitle>Cor do Cabelo:</CharacteristicsTitle>
             <CharacteristicsValue>1.60</CharacteristicsValue>
           </CharacteristicsContent>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Skin Color:</CharacteristicsTitle>
+            <CharacteristicsTitle>Cor da Pele:</CharacteristicsTitle>
             <CharacteristicsValue>1.60</CharacteristicsValue>
           </CharacteristicsContent>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Birthday Year:</CharacteristicsTitle>
+            <CharacteristicsTitle>Ano de Nascimento:</CharacteristicsTitle>
             <CharacteristicsValue>1.60</CharacteristicsValue>
           </CharacteristicsContent>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Gender:</CharacteristicsTitle>
+            <CharacteristicsTitle>Gênero:</CharacteristicsTitle>
             <CharacteristicsValue>1.60</CharacteristicsValue>
           </CharacteristicsContent>
 

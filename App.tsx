@@ -6,6 +6,8 @@ import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
 import theme from './src/styles/theme';
 
+import { Routes } from './src/routes';
+
 import { 
   useFonts, 
   Inter_400Regular,
@@ -49,7 +51,7 @@ export default function App() {
             backgroundColor="transparent"
          />
 
-         <CharacterDetails />
+         <Routes />
 
     </ThemeProvider>
 
