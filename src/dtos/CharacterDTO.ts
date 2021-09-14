@@ -1,6 +1,5 @@
 export interface CharacterDTO {
-
-    
+         
         name: string, 
         height: string, 
         mass: string, 

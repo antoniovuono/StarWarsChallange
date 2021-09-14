@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CharacterCards } from '../../components/CharacterCards';
 
 import { CharacterDTO } from '../../dtos/CharacterDTO';
+import { api } from '../../services/api';
 
 import {
  Container,
@@ -11,10 +12,11 @@ import {
  Content,
  ListTitle,
  ListSubTitle,
+ CharacterList
 } from './styles';
 
 export function Home(){
-const [ characters, setCharacters] = useState<CharacterDTO[]>([]);
+const [characters, setCharacters] = useState<CharacterDTO[]>([]);
 const [loading, setLoading] = useState(true);
 
 useEffect(() => {
@@ -22,13 +24,20 @@ useEffect(() => {
   async function fetchCharacters() {
     
     try {
+    const response = await api.get('/people');
 
-
+    //console.log(response.data)
+    setCharacters(response.data);
+    
     } catch(error) {
-
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
 
   }
+
+  fetchCharacters();
 
 }, []);
 
@@ -49,10 +58,17 @@ return (
 
       </Content>
 
+            <CharacterList
 
-      <CharacterCards name="Luke Skal Walker" />
+              data={characters}
+              keyExtractor={ item => item.name}
+              showsVerticalScrollIndicator={false}
+              renderItem={({ item }) => (
+                  <CharacterCards name={item.name} />
+                )} 
+              />
 
-      <CharacterCards name="Mareta 12"  />
+      
 
 
     </ListCharactersContent>

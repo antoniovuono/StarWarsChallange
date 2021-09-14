@@ -63,3 +63,5 @@ export const ListCharactersContent = styled.View`
 
 `;
 
+export const CharacterList = styled.FlatList``;
+
