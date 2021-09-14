@@ -1,6 +1,4 @@
-import AppLoading from 'expo-app-loading';
 import React, { useState, useEffect } from 'react';
-import { ActivityIndicator } from 'react-native';
 
 import { CharacterCards } from '../../components/CharacterCards';
 import { FooterList } from '../../components/FooterList';
