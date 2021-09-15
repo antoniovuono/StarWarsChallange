@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Alert } from 'react-native';
 
 import { CharacterDTO } from '../../dtos/CharacterDTO';
 
@@ -17,7 +19,12 @@ import {
  CharacteristicsContent,
  CharacteristicsTitle,
  CharacteristicsValue,
+ Footer,
+ ButtonFavorite,
+ TitleButton,
+ FavoriteIcon,
 } from './styles';
+
 
 interface Params {
   character: CharacterDTO;
@@ -31,6 +38,27 @@ const { character } = route.params as Params;
 
 function handleGoBack() {
   navigation.goBack();
+}
+
+async function handleAddToFavorites() {
+  try {
+    const dataKey = '@starwarschallange:favorites';
+    const storageItems = await AsyncStorage.getItem(dataKey);
+    const formattedData = storageItems ? JSON.parse(storageItems) : [];
+
+    const findData = formattedData.find((item:CharacterDTO) => item.name === character.name);
+
+    console.log(formattedData);
+
+    if(findData) return;
+
+    await AsyncStorage.setItem('@starwarschallange:favorites', JSON.stringify([...formattedData, character]));
+    
+  } catch (error) {
+    console.log(error)
+
+    Alert.alert('Não foi possível favoritar o personagem !');
+  }
 }
 
 return (
@@ -83,6 +111,18 @@ return (
           </CharacteristicsContent>
 
         </DetailsBody>
+
+        <Footer>
+          <ButtonFavorite
+            onPress={handleAddToFavorites}
+          >
+              <TitleButton>FAVORITAR PERSONAGEM</TitleButton>
+              <FavoriteIcon
+               name="favorite"
+               size={24}
+              />
+          </ButtonFavorite>
+        </Footer>
 
       </DetailsContent>
   </Container>

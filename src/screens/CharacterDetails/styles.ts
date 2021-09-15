@@ -2,6 +2,8 @@ import styled from 'styled-components/native';
 import { Entypo } from '@expo/vector-icons'; 
 import { RFValue } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { RectButton } from 'react-native-gesture-handler';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export const Container = styled.View`
    flex: 1;
@@ -117,4 +119,45 @@ export const CharacteristicsValue = styled.Text`
 
 
 `;
+
+export const Footer = styled.View`
+
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+`;
+
+export const ButtonFavorite = styled(RectButton)`
+
+   background-color: ${({theme}) => theme.colors.title};
+
+   width: 230px;
+   height: 50px;
+   border-radius: 20px;
+
+
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+
+   padding: 0 20px;
+
+`;
+
+export const TitleButton = styled.Text`
+
+      color: ${({theme}) => theme.colors.shpae_dark};
+      font-size: ${RFValue(11)}px;
+      font-family: ${({theme}) => theme.fonts.secondary_400};
+
+`;
+
+export const FavoriteIcon = styled(MaterialIcons)`
+
+      color: ${({theme}) => theme.colors.shpae_dark};
+
+`;
+
 
