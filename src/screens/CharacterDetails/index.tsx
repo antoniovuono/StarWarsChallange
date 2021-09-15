@@ -51,6 +51,8 @@ async function handleAddToFavorites() {
     if(findData) return;
 
     await AsyncStorage.setItem('@starwarschallange:favorites', JSON.stringify([...formattedData, character]));
+
+    navigation.navigate('Favorites');
     
   } catch (error) {
     console.log(error)
