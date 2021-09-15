@@ -48,8 +48,6 @@ async function handleAddToFavorites() {
 
     const findData = formattedData.find((item:CharacterDTO) => item.name === character.name);
 
-    console.log(formattedData);
-
     if(findData) return;
 
     await AsyncStorage.setItem('@starwarschallange:favorites', JSON.stringify([...formattedData, character]));

@@ -1,8 +1,10 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { getBottomSpace, getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { CharacterDTO } from '../../dtos/CharacterDTO';
+import { MaterialIcons } from '@expo/vector-icons';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
    flex: 1;
@@ -66,11 +68,27 @@ export const ListCharactersContent = styled.View`
 
 `;
 
-export const CharacterList = styled(FlatList as new () => FlatList<CharacterDTO>)`
+export const CharacterList = styled(FlatList as new () => FlatList<CharacterDTO>)``;
+
+export const MyFavoritesButton = styled(RectButton)`
+
+   width: 60px;
+   height: 60px;
+
+   background-color: ${({theme}) => theme.colors.shpae_dark};
 
 
-  
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 30px;
+
+   position: absolute;
+   top: 75px;
+   right: 20px;
+`;
+
+export const Ionicons = styled(MaterialIcons)`
 
 
 `;
-

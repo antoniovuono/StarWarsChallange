@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { useTheme } from 'styled-components';
 
 import { CharacterCards } from '../../components/CharacterCards';
 import { FooterList } from '../../components/FooterList';
@@ -16,8 +17,11 @@ import {
  Content,
  ListTitle,
  ListSubTitle,
- CharacterList
+ CharacterList,
+ MyFavoritesButton,
+ Ionicons,
 } from './styles';
+
 
 export function Home(){
 const [characters, setCharacters] = useState<CharacterDTO[]>([]);
@@ -25,9 +29,14 @@ const [page, setPage] = useState(1);
 const [loading, setLoading] = useState(true);
 
 const navigation = useNavigation();
+const theme = useTheme();
 
 function handleCharactersDetails(character: CharacterDTO) {
     navigation.navigate('CharacterDetails', {character});
+}
+
+function handleFavorites() {
+    navigation.navigate('Favorites');
 }
 
 
@@ -73,7 +82,7 @@ return (
       </Content>
 
       <ListTitle style={{ fontSize:13, padding: 5 }}>
-        Role a lista para baixo para obter mais personagens
+        Role a lista para obter mais personagens
       </ListTitle>
 
         { loading ? <Load /> :
@@ -91,10 +100,19 @@ return (
               />
               
         }
-           
-            
+                      
 
     </ListCharactersContent>
+
+    <MyFavoritesButton
+      onPress={handleFavorites}
+    >
+        <Ionicons
+            name="favorite"
+            size={32}
+            color={theme.colors.title}
+        />
+    </MyFavoritesButton>
 
   </Container>
   );
