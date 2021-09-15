@@ -31,8 +31,6 @@ async function loadFavorites() {
   const storageItems = await AsyncStorage.getItem(dataKey);
   const favorites = storageItems ? JSON.parse(storageItems) : [];
 
-  console.log(favorites)
-
   setFavorites(favorites);
 
 }
