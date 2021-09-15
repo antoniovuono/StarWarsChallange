@@ -3,8 +3,8 @@ import React from 'react';
 import {
  Container,
  Name,
- ButtonFavorite,
- FavoriteIcon
+ ButtonNextPage,
+ NextPageIcon
 } from './styles';
 
 interface Props {
@@ -18,12 +18,12 @@ return (
       
        <Name>{name}</Name>
 
-          <ButtonFavorite>
-            <FavoriteIcon 
+          <ButtonNextPage>
+            <NextPageIcon 
                 name="rightcircle"
                 size={24}
             />
-          </ButtonFavorite>
+          </ButtonNextPage>
 
 
 

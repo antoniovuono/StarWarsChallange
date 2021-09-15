@@ -45,7 +45,7 @@ export const Title = styled.Text`
 
 `;
 
-export const DetailsContent = styled.View`
+export const DetailsContent = styled.ScrollView`
 
    flex: 1;
    width: 100%;

@@ -33,9 +33,9 @@ export const Name = styled.Text`
 
 `;
 
-export const ButtonFavorite = styled.TouchableOpacity``;
+export const ButtonNextPage = styled.TouchableOpacity``;
 
-export const FavoriteIcon = styled(AntDesign)`
+export const NextPageIcon = styled(AntDesign)`
 
     color: ${({theme}) => theme.colors.title};
    

@@ -44,3 +44,19 @@ export const Title = styled.Text`
    margin-left: 50px;
 
 `;
+
+export const FavoritesListContent = styled.View`
+
+   width: 100%;
+
+   padding: 5px 20px;
+
+`;
+
+export const FavoriteTitle = styled.Text`
+
+   color: ${({theme}) => theme.colors.title};
+   font-size: ${RFValue(18)}px;
+   font-family: ${({theme}) => theme.fonts.secondary_600};
+
+`;
