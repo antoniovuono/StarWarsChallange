@@ -106,7 +106,7 @@ return (
           </CharacteristicsContent>
 
           <CharacteristicsContent>
-            <CharacteristicsTitle>Gêneros:</CharacteristicsTitle>
+            <CharacteristicsTitle>Gênero:</CharacteristicsTitle>
             <CharacteristicsValue>{character.gender}</CharacteristicsValue>
           </CharacteristicsContent>
 
